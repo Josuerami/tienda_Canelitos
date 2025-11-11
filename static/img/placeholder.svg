@@ -1,4 +1,5 @@
-<svg width="150" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect width="150" height="200" fill="#cccccc"/>
-  <text x="75" y="100" text-anchor="middle" font-family="Arial" font-size="14" fill="#000000">No Image</text>
-</svg>
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+        <rect width="200" height="200" fill="#f8d7da"/>
+        <text x="100" y="100" text-anchor="middle" font-family="Arial" font-size="16" fill="#721c24">Product Image</text>
+        <text x="100" y="120" text-anchor="middle" font-family="Arial" font-size="12" fill="#721c24">Placeholder</text>
+    </svg>
