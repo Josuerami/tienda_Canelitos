@@ -113,24 +113,29 @@ def login():
                     session['user_role'] = u.get('role', 'client')
                     session['user_email'] = u.get('email')
                     session['cart'] = []  # Inicializar carrito vacío
-                    
+
                     # Registrar el login exitoso
                     cur.execute("""
-                        INSERT INTO login_history (user_id, login_date) 
+                        INSERT INTO login_history (user_id, login_date)
                         VALUES (%s, NOW())
                     """, (u['id'],))
                     conn.commit()
-                    
+
                     # Redirigir a home (que ya maneja la redirección por rol)
                     return redirect(url_for('home'))
-                    
+
             flash("Usuario o contraseña incorrectos")
+            return render_template('login.html')
         except Exception as e:
             print("Error en login:", str(e))
             flash("Error al iniciar sesión. Por favor, intenta de nuevo.")
             conn.rollback()
+            return render_template('login.html')
         finally:
             conn.close()
+
+    # Para solicitudes GET, mostrar el formulario de login
+    return render_template('login.html')
 
 # === HOME (redirige por rol) ===
 @app.route('/home')
