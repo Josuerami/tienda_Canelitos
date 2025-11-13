@@ -66,16 +66,16 @@ CREATE TABLE order_details (
 );
 
 -- Insert admin user
-INSERT INTO users (username, name, email, password, role) 
-VALUES ('admin', 'Administrador', 'admin@canelitos.com', 'admin123', 'admin');
+INSERT INTO users (username, name, email, password, role)
+VALUES ('admin', 'Administrador', 'admin@canelitos.com', 'scrypt:32768:8:1$MO97NxWiTbujIU6A$3faa767c0747f02deb8c6f7cf05f303c61181953134df976bd944bcfe0d437ecfbcfc88a410e416da6f2402d11a5a121f8ce9ad9ea6c3b6b7aee7afa53626d71', 'admin');
 
 -- Insert demo seller
 INSERT INTO users (username, name, email, password, role)
-VALUES ('vendedor', 'Vendedor Demo', 'vendedor@canelitos.com', 'vendedor123', 'seller');
+VALUES ('vendedor', 'Vendedor Demo', 'vendedor@canelitos.com', 'scrypt:32768:8:1$HKCVaAI1zHxnwcee$0c5bbf3b953d1d6cd0fd0b2c3e7e8b1c6ec34b966e44e41d520c5bbf3b953d1d6cd0fd0b2c3e7e8b1c6ec34b966e44e41d52', 'seller');
 
 -- Insert demo delivery
 INSERT INTO users (username, name, email, password, role)
-VALUES ('repartidor', 'Repartidor Demo', 'repartidor@canelitos.com', 'repartidor123', 'delivery');
+VALUES ('repartidor', 'Repartidor Demo', 'repartidor@canelitos.com', 'scrypt:32768:8:1$zbSBvhqSEuPpDEIx$fcd75356eaa6927b04935e71cff7c724697e3d8b1ad09c6ee38648979d4ea1798e5a6a3da152d8729ae35ceb3d228758c3b8576d198274b4406da8b2add5483e8', 'delivery');
 
 -- Insert some demo products
 INSERT INTO products (name, category, description, price, stock) VALUES

@@ -619,7 +619,7 @@ def logout():
     return redirect(url_for('login'))
 
 # === SERVICIO DE IMÁGENES ===
-@app.route('/img/<path:filename>')
+@app.route('/img/<path:filename> ')
 def img(filename):
     if '..' in filename:
         return "Invalid path", 400
